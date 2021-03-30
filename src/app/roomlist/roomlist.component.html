@@ -1,0 +1,32 @@
+<img src="./austin-distel-wawEfYdpkag-unsplash.jpg" alt="">
+<div class="center_div mat-elevation-z8">
+  <h2 class="h2">Your name : {{ nickname }}</h2>
+  <div class="container1">
+    <button mat-flat-button (click)="logout()" class="btn btn-primary">Logout</button><br><br>
+  </div>
+
+<div>
+  <h2 class="h2">Add Room</h2>
+  <div class="example-loading-shade"
+       *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+  <div class="button-row">
+    <button mat-flat-button color="primary" [routerLink]="['/addroom']" class="btn btn-primary">Add</button>
+  </div>
+  <br><br>
+</div>
+
+<div class="mat-elevation-z8" class="container2">
+    <table mat-table [dataSource]="rooms" class="example-table"
+           matSort matSortActive="roomname" matSortDisableClear matSortDirection="asc" class="table table-dark">
+      <!-- Room Name Column -->
+      <ng-container matColumnDef="roomname">
+          <th mat-header-cell *matHeaderCellDef class="room-table">Select Any Room</th>
+          <td mat-cell *matCellDef="let row " class="table-row">{{row.roomname | titlecase}}</td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row ; columns: displayedColumns;" (click)="enterChatRoom(row.roomname)"></tr>
+    </table>
+</div>
+</div>

@@ -1,0 +1,49 @@
+img {
+  background-repeat: repeat;
+  pointer-events: none;
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  z-index: -1;
+  border: 2px solid black;
+}
+
+.center_div{
+  margin: 20px 10px 50px 80px;
+  width:80%;
+  height: 100%;
+  text-align: center;
+  /* background-image: url(./austin-distel-wawEfYdpkag-unsplash.jpg); */
+} 
+
+table {
+  align-items: center;
+  width: 50%;
+  margin: auto 
+}
+
+.h2,.h3{
+  text-align: center;
+  font-weight: bold;
+  background-color: lightblue;
+  width: 30%;
+  margin-left: 35%;
+}
+
+.container2{
+  cursor: pointer;
+}
+
+.room-table{
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  cursor: auto;
+}
+
+.table-row{
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  background-color: lightblue;
+}

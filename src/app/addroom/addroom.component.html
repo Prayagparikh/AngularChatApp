@@ -1,0 +1,19 @@
+<img src="./philipp-berndt-5i0GnoTTjSE-unsplash.jpg">
+<div class="container center_div">
+    <form class="example-form" [formGroup]="roomForm" (ngSubmit)="onFormSubmit(roomForm.value)" class="form-group">
+        <h2 class="h2">ADD NEW ROOM</h2>
+        <mat-form-field class="example-full-width" appearance="legacy">
+          <mat-label>Room Name</mat-label>
+          <input matInput placeholder="Enter room name" formControlName="roomname"
+                  [errorStateMatcher]="matcher" class="form-control">
+          <mat-error>
+            <span *ngIf="!roomForm.get('roomname')?.valid && roomForm.get('roomname')?.touched">Enter room name</span>
+          </mat-error>
+        </mat-form-field>
+        <br><br>
+
+        <div class="button-row">
+            <button type="submit" [disabled]="!roomForm.valid"  mat-fab color="primary" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+  </div>

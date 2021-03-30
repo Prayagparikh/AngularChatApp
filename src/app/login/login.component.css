@@ -1,0 +1,50 @@
+img {
+  pointer-events: none;
+  position: absolute;
+  width: 80%;
+  height: 90%;
+  z-index: -1;
+  border: 2px solid black;
+}
+
+.container{
+  margin: auto;
+  /* background-image: url(./william-iven-DfMMzzi3rmg-unsplash.jpg); */
+}
+
+.h2{
+  color: blue;
+  font-weight: bold;
+  text-align: center;
+}
+
+.example-container {
+  background-size: cover;
+  padding: 40px;
+  
+  }  
+  .example-form {
+    background-color: lemonchiffon;
+    width: 400px; 
+    position: relative;
+    left:20%;
+    padding: 50px;
+    margin: 140px;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  .example-full-width:nth-last-child(0) {
+    margin-bottom: 10px;
+  }
+  
+  .button-row {
+    margin: 10px 0;
+    transform: translateX(40%);
+  }
+  
+  .mat-flat-button {
+    margin: 5px;
+  }
